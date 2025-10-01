@@ -1,10 +1,11 @@
-<?php
-$host = "localhost";   // your database host
-$user = "root";        // database username
-$pass = "12345";            // database password
-$db   = "project";  // your database name
 
-$conn = new mysqli($host, $user, $pass, $db);
+<?php
+$servername = getenv("DB_HOST");
+$username   = getenv("DB_USER");
+$password   = getenv("DB_PASS");
+$dbname     = getenv("DB_NAME");
+
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
