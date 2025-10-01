@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // --- NEW LOGIC for "View Recipe" Button ---
         if (event.target.classList.contains('view-btn')) {
             // Redirect to the main page and add the recipe ID to the URL
-            window.location.href = `recipe.html?id=${recipeId}`;
+            window.location.href = `index.html?id=${recipeId}`;
         }
     });
 
